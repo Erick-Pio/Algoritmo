@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 17</title>
+</head>
+<body>
+    
+    <h3>Capitais</h3>
+<!--
+    A tag select exibe uma "drop box", "uma caixinha de seleção".
+    Cada iten da lista é uma tag option
+-->
+
+    Selecione um estado
+    <select id="sel_estado">
+        <option value="Belo Horizonte">Minas Gerais</option>
+        <option value="São Luís">Maranhão</option>
+        <option value="Florianópolis">Santa Catarina</option>
+    </select>
+    <br>
+    <button onclick="ver_capital()">Ver Capital</button>
+
+</body>
+</html>
+
+<script>
+    function ver_capital(){
+        var capital = sel_estado.value 
+
+        alert (`A capital é ${capital}`)
+
+    }
+
+</script>

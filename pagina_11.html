@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu Nome
+    <input id="i_nome"> <br>
+    Informe sua idade
+    <input id="i_idade"> <br>
+   <br> <button onclick="salvar()">salvar</button>
+
+   <br>
+   <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    
+    function salvar(){
+        
+        div_resultado.innerHTML = `cadastro de ${i_nome.value}, de ${i_idade.value} anos realizados`
+        
+        //innerHTML->É o corpo de uma tag qualquer, se usamos '=' nós substituimos o corpo do codigo
+
+
+
+    }
+
+</script>

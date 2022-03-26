@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu Nome
+    <input id="i_nome"> <br>
+    Informe sua idade
+    <input id="i_idade"> <br>
+    <button onclick="salvar()">salvar</button>
+
+</body>
+</html>
+
+<script>
+    //Crase e não aspas simples quando colocar texto e código de valor.
+    //${} Antecede o código antes do texto, possibilitando que o código seja efetuado junto com o texto.
+    //Nome da técnica é INTERPOLAÇÃO
+    //Onde juntamos texto estático (texto que é exibido) com partes dinâmicas(código para saber o valor;
+    //nesse caso de nome e idade).
+    function salvar(){
+        //Interpolação
+        
+        alert(`cadastro de ${i_nome.value}, de ${i_idade.value} anos realizados`)
+        
+        alert('cadastro de ' +i_nome.value+', de ' +i_idade.value+' anos realizados')
+        
+        //Concatenação
+
+
+
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Número qualquer: 
+    <input id="in_numero"> <br>
+    
+    Quanto porcento dele você quer? 
+    <input type="text" id="in_porcentagem">
+    <br>
+
+    <button onclick="porcentagem()">Calcular</button>
+
+    <br><br>
+    <span id="span_resultado"></span>
+</body>
+</html>
+<script>
+    function porcentagem() {
+        span_resultado.innerHTML = ` 
+        ${in_porcentagem.value}% de ${in_numero.value} é ${Number(in_porcentagem.value) * Number(in_numero.value) / 100}%`
+
+
+
+    }
+
+
+
+</script>

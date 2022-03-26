@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe o 1° número da PG
+    <input id="in_pg1"> <br>
+
+    Informe a Razão da in_pg
+    <input id="in_pgr"> <br>
+
+    Informe qual termo gostaria?
+    <input id="in_pgt"> <br>
+
+    <button onclick="termo()">Obter termo</button>
+
+    <p id="p_pg"></p>
+</body>
+</html>
+
+<script>
+    function termo() {
+    p_pg.innerHTML = `1° valor de <b>${Number(in_pg1.value)}</b>; Razão de <b>${Number(in_pgr.value)}</b>; 
+    termo que quer <b>${Number(in_pgt.value)}</b>; Resultado    
+    <u><b>${Number(in_pg1.value) * Number(in_pgr.value) ** Number(in_pgt.value - 1)}</b></u>`
+    }
+    
+    //coloquei o termo em negrito também, porque achei mais bonito assim
+    
+</script>

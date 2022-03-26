@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a quantidade de vitórias do seu time <br>
+    <input id="in_vit"><br> <br>
+
+    Informe a quantidade de empates do seu time <br>
+    <input id="in_emp"> <br> <br>
+
+    Informe a quantidade de derrotas do seu time <br>
+    <input id="in_der"><br> <br>
+
+    <button onclick="pont()">Calcular pontuação</button>
+
+    <br>
+
+    <div id="div_pontuacao"></div>
+</body>
+</html>
+<script>
+    function pont() {
+        div_pontuacao.innerHTML = `Seu time teve ${Number(in_vit.value)} vitórias, 
+        ${Number(in_emp.value)} empates, ${Number(in_der.value)} derrotas, logo, obteve 
+        ${Number(in_vit.value * 3) + Number(in_emp.value)} pontos `
+
+
+    }
+
+
+
+
+</script>

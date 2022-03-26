@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 06</title>
+</head>
+<body>
+    <h2>Página 15</h2>
+
+    Salário bruto: <input id="in_bruto"> <br>
+
+    <button onclick="liquido()">Calcular Salário Líquido</button>
+    
+    <div id="div_salario" style="color: blue;"></div>
+
+</body>
+</html>
+<script>
+    
+    function liquido() {
+
+        //Aqui nós pedimos para o programa criar uma 
+        //VARIÁVEL -> Uma informação que ele pode usar quando quiser :)
+        var bruto = in_bruto.value
+
+        div_salario.innerHTML = `
+        Apesar de seu bruto ser R$${bruto}, após os descontos, você receberá somente 
+        <span style="color:green">R$${Number(bruto) - Number(bruto)*0.10 - 
+            Number(bruto)*0.20  - Number(bruto)/30}</span>
+        `
+    }
+
+</script>

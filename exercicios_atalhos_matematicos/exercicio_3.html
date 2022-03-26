@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericio 3</title>
+</head>
+
+<body>
+    <h3 style="color: blue;">Exercicio 3</h3>
+
+
+    Você já gastou com besteiras este mês: <b>R$</b> <b id="b_din">0.00</b>
+
+    <br> <br>
+
+    <button onclick="cafe()">Comprar cafézinho</button>
+    <br> <br>
+    <button onclick="mc()">Comprar casquinha do mc</button>
+    <br> <br>
+    <button onclick="bolacha()">Comprar bolacha</button>
+
+</body>
+
+</html>
+
+<script>
+    var saldo = Number (0.00)
+
+    function atualizar() {
+        b_din.innerHTML = (saldo.toFixed(2))
+
+
+    }
+    
+    function cafe() {
+        saldo += 3.50
+        atualizar()
+    }
+
+    function mc() {
+        saldo += 2.25
+        atualizar()
+    }
+
+    function bolacha() {
+        saldo += 5.13
+        atualizar()
+    }
+
+</script>

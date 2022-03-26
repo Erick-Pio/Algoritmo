@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SPconsult</title>
+</head>
+
+<body>
+
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA <span style="color: rgb(175, 255, 255);">FINANCEIRA </span></h2>
+
+    <img style="width: 100px;" src="logo.jpg"> <br>
+
+    Informe o nome da empresa
+    <input id="inp_nome"> <br> <br>
+
+    Informe a média do preço do seu produto
+    <input id="inp_preço"> <br> <br>
+
+    Informe o valor médio que é produzido pela empresa
+    <input id="in_produto"> <br> <br>
+
+    Informe o valor de desperdicio (em %)
+    <input id="inp_desperdicio"> <br> <br>
+
+    <button onclick="sei()">Ver resultado</button> &nbsp;
+    <br> <br>
+
+    <div id="div_avançar"></div>
+    <div id="div_calculo"></div>
+
+</body>
+
+</html>
+
+<script>
+    function sei() {
+        var desp = Number(inp_desperdicio.value)
+        var prod = Number(in_produto.value)
+        var prc = Number(inp_preço.value)
+        var prod_desp = (prod * (desp / 100)) * prc
+        var spprod = prod * desp / 100
+
+        div_avançar.innerHTML = `Seu desperdicio médio por mes é de <b style="color: red;">${desp}%</b>, com isso sua 
+        empresa perde por mes em torno de <b style="color: red;">${prod * (desp / 100)}
+        produtos</b>. <br> 
+        O que em dinheiro seria uma margem de <b style="color: red;">R$ ${prod_desp}</b> <b>perdidos.</b>
+        
+        <br> <br>
+        
+        <button onclick="calculo()">Calcular como seria com a SPconsult</button>
+        
+        <br> <br>
+    `
+    }
+    function calculo() {
+        var desp = Number(inp_desperdicio.value)
+        var prod = Number(in_produto.value)
+        var prc = Number(inp_preço.value)
+        var prod_desp = (prod * (desp / 100)) * prc
+        var spprod = prod * desp / 100
+
+        div_calculo.innerHTML = `
+        Já com a nossa solução  garantimos que seu percentual de desperdicio diminuiria pelo menos  em 
+        ${desp * 0.30}%, sendo assim a empresa perderia apenas ${spprod - (spprod * 0.30)} produtos. 
+        Em dinheiro reduziria para R$ ${prod_desp - (prod_desp * 0.30)}. 
+        `
+    }
+</script>

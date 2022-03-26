@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 19</title>
+</head>
+<body>
+
+    <h3>Página 19</h3>
+    
+    <div>
+        Seu saldo no cofrinho é de <b id="b_saldo">0</b>
+    </div>
+    <br>
+    <button onclick="depositar10()">Depositar 10</button>
+    <button onclick="tirar5()">Retirar 5</button>
+
+</body>
+</html>
+
+<script>
+    
+    //Quando criamos uma cariável fora das funções ela é uma variável global
+    //Ou seja, fica compartilhada entre todas as funções, qualquer uma pode pegar ou alterar seu valor
+
+    var numero = 0
+
+    function depositar10() {
+        //Quando criamos variáveis dentro da função, criamos variáveis locais
+        numero += 10
+        b_saldo.innerHTML = (numero) 
+
+    }
+
+    var saldo = 0
+
+    function tirar5() {
+
+        numero -= 5
+        b_saldo.innerHTML = (numero)
+    }
+</script>

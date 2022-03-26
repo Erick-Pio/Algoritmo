@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe sua primeira nota
+    <input id="in_nota1"> <br> <br>
+
+    
+    Informe sua segunda nota 
+    <input id="in_nota2"> <br> <br>
+
+    <button onclick="media()">Calcular média</button>
+    
+    <br>
+    
+    <div id="div_media"></div>
+</body>
+</html>
+
+<script>
+    function media() {
+
+        div_media.innerHTML = `Você tirou ${Number(in_nota1.value)}
+         e ${Number(in_nota2.value)}, logo sua média foi de ${(Number(in_nota1.value) + Number(in_nota2.value)) / 2}`
+
+
+    }
+
+
+
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a quantos minutos a torneira 1 ficou aberta 
+    <input id="in_min1"> <br>
+
+    Informe a quantos minutos a torneira 2 ficou aberta 
+    <input id="in_min2"> <br>
+
+    Informe a quantos minutos a torneira 3 ficou aberta 
+    <input id="in_min3"> <br> <br>
+
+    <button onclick="desperdicio()">Veja seu desperdicio de água</button>
+</body>
+</html>
+
+<script>
+    function desperdicio() {
+        alert (`Suas torneiras desperdiçaram ${(Number(in_min1.value) + Number(in_min2.value) + Number(in_min3.value)) * 15} Litros`)
+    }
+
+</script>

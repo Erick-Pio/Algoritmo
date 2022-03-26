@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leandro Timista</title>
+</head>
+
+<body>
+    Quantos pães você comeu no dia?
+    <input id="in_paes"> <br>
+
+    Quantas casquinhas você consumiu no dia?
+    <input id="in_casq"> <br>
+
+    Quantos minutos de caminhada fez no dia?
+    <input id="in_cami"> <br>
+
+    Quanto minutos de musculação fez no dia?
+    <input id="in_musc"> <br>
+
+    <button onclick="dieta()">Saiba quantas calorias ganhou e perdeu</button>
+
+    <p id="p_dieta"></p>
+</body>
+
+</html>
+
+<script>
+    function dieta() {
+        p_dieta.innerHTML = ` <img style="height: 200px;" src="calc.jpg"> <br>
+        <span style="background-color: oldlace; color: white;">Entre o que você ganhou e perdeu de caloria no dia, seu saldo é de 
+        ${(Number(in_paes.value * 100) + Number(in_casq.value * 300)) - (Number(in_cami.value * 50) + Number(in_musc.value * 30))}</span>
+        `
+    }
+</script>

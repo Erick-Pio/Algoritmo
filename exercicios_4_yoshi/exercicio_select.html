@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+</head>
+<body>
+    
+    <h3 style="color: yellow;">Frutas</h3>
+    
+    Selecione uma fruta
+    <select id="sel_fruta">
+        <option value="Vermelha por fora e doce">Maçã</option>
+        <option value="Pequena e em cachos">Uva</option>
+        <option value="Amarelo e doce">Pera</option>
+        <option value="Vermelho, pequeno e azedo">Morango</option>
+        <option value="Amarelo e com espinhos">Abacaxi</option>
+    </select>
+    <br>
+    <button onclick="descrever()">Descrever fruta</button>
+
+</body>
+</html>
+
+<script>
+    function descrever() {
+        var fruta = sel_fruta.value
+        
+        alert (`Essa fruta é assim: ${fruta}`)
+
+    }
+
+</script>

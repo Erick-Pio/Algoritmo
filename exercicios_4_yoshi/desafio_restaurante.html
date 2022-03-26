@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+</head>
+<body>
+    <h3 style="color: red;">Cardápio</h3>
+
+    Selecione sua entrada
+    <select id="sel_entrada">:
+        <option value="0">Nenhuma</option>
+        <option value="10.00">Salada simples</option>
+        <option value="15.00">Torradas com patê</option>
+    </select>
+    
+    <br>
+    
+    Selecione o prato principal:
+    <select id="sel_principal">
+        <option value="20.00">Pf de frango</option>
+        <option value="35.00">PF de picanha</option>
+        <option value="40.00">PF Vegano</option>
+    </select>
+    
+    <br>
+
+    Selecione a sobremesa:
+    <select id="sel_sobremesa">
+        <option value="0">Nenhuma</option>
+        <option value="2.50">Gelatina</option>
+        <option value="7.50">Salada de Frutas</option>
+    </select>
+    <br>
+
+    Diga seu nome
+    <input id="inp_nome">
+
+    <br>
+
+    <button onclick="valor()">Calcular preço da refeição</button>
+
+    <div id="div_valor"></div>
+</body>
+</html>
+
+<script>
+    function valor() {
+        var nome = inp_nome.value
+        var resultado = Number(sel_entrada.value + sel_principal.value + sel_sobremesa.value)
+
+        div_valor.innerHTML = `Olá, ${nome}. Sua refeição vai custar R$ ${resultado.toFixed(2)}` 
+
+    }
+
+</script>

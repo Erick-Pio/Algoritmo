@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu Nome
+    <input id="i_nome"> <br>
+    Informe sua idade
+    <input id="i_idade"> <br>
+    <button onclick="s_nome()">Salvar nome</button>
+    <button onclick="s_idade()">Salvar idade</button>
+    <button onclick="s_tudo()">Salvar tudo</button>
+
+</body>
+</html>
+
+<script>
+    function s_nome(){
+        alert('Salvando nome')
+        alert(i_nome.value)
+    }
+
+    function s_idade(){
+        alert('Salvando idade')
+        alert(i_idade.value)
+    }
+
+    function s_tudo() {
+        s_nome()
+        s_idade()
+     }
+
+// usar innerhtml = '' para limpar o nome no exercicio
+// innerhtml serve para usar tags de html em java script
+
+</script>
+<!--Quando for chamar outra função, colocar "s_nome()" e não "(s_nome())"-->
+
+

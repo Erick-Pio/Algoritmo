@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+    <h3 style="color: aqua;">Exercicio 2</h3>
+
+    <div>
+        Você já clicou <b id="b_numero">0</b> 
+    </div>
+
+    <button onclick="clica()">Clica nimin</button>
+    <button onclick="desfazer()">Desfazer</button>
+
+</body>
+
+</html>
+
+<script>
+
+    var numero = 0
+
+    function clica() {
+        numero++
+        b_numero.innerHTML = (numero)
+
+    }
+
+    function desfazer() {
+
+        numero--
+        b_numero.innerHTML = (numero)
+
+    }
+
+
+</script>

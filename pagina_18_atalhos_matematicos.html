@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 18</title>
+</head>
+
+<body>
+
+    <h3>Página 18 - Atalhos matemáticos</h3>
+
+    <input placeholder="Digite um número" id="inp_numero">
+    <br>
+    <button onclick="aumentar1()">Aumentar em 1</button>
+    <button onclick="diminuir1()">Diminuir em 1</button>
+    <button onclick="aumentar5()">Aumentar em 5</button>
+    <button onclick="diminuir20()">Diminuir em 20</button>
+
+</body>
+
+</html>
+
+<script>
+    function aumentar1() {
+        var numero = Number(inp_numero.value)
+        numero++
+        alert(numero)
+    }
+
+    function diminuir1() {
+        var numero = Number(inp_numero.value)
+        numero--
+        alert(numero)
+    }
+
+    function aumentar5() {
+        var numero = Number(inp_numero.value)
+        numero += 5
+        alert(numero)
+    }
+
+    function diminuir20() {
+        var numero = Number(inp_numero.value)
+        numero -= 20
+        alert(numero)
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="money.jfif"> <br>
+
+    Quanto dinheiro terá em 6 meses
+    <input id="din_6mes"> <BR>
+
+    Quanto dinheiro terá em 3 anos
+    <input id="din_3anos"> <BR> <br>
+
+    <button onclick="futuro()">Como estarei no futuro</button>
+
+    <p id="p_6m"></p>
+    <p id="p_3a"></p>
+</body>
+</html>
+
+<script>
+    function futuro() {
+        p_6m.innerHTML = `
+        <img src="dinheiro6.jfif"> <br>
+        O valor daqui a 6 meses R$ ${Number(din_6mes.value)}. 
+        `
+        p_3a.innerHTML = `
+        <img src="din3anos.jfif"> <br>
+        O valor daqui a 3 anos R$ ${Number(din_3anos.value)}.
+        `
+    }
+
+</script>

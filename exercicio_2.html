@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+    
+    <h3>Compre seu lanche</h3>
+
+    <select id="sel_combo">
+        <option value="">-- Selecione o que deseja -- </option>
+        <option value="3.00">Casquinha do MC</option>
+        <option value="10.50">Batata Frita</option>
+        <option value="13.00">Milk Shake</option>
+        <option value="6.00">Salada de Frutas</option>
+    </select>
+
+    <button onclick="combo()">Comprar item</button>
+
+    <div id="div_total"></div> 
+    <div id="div_extrato"></div>
+</body>
+
+</html>
+<script>
+    
+    var total = 0
+    
+function combo(){
+    total += Number(sel_combo.value)
+    div_total.innerHTML = `Total de sua compra R$ ${total.toFixed(2)} - Extrato da compra`
+    div_extrato.innerHTML += `<br> R$ ${sel_combo.value}`
+}
+
+</script>

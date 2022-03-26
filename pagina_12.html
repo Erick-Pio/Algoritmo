@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Minha 1° calculadora</h3>
+
+    1°. número <input id="in_numero1"> <br>
+    2°. número <input id="in_numero2"> <br>
+
+    <br> <button onclick="multiplicar()">Multiplicar</button>
+    <br> <button onclick="subtrair()">Subtrair</button>
+    <br> <button onclick="dividir()">Dividir</button>
+    <br> <button onclick="somar()">Somar</button>
+
+
+</body>
+</html>
+<script>
+//input# + 'nome do input' + enter (HTML)
+
+    function multiplicar() {
+        alert(`Multiplicação: ${in_numero1.value * in_numero2.value}`)
+    }
+
+    function subtrair() {
+    alert(`Subtração: ${in_numero1.value - in_numero2.value}`)
+    
+    }
+
+    function dividir() {
+    alert(`Divisão: ${in_numero1.value / in_numero2.value}`)
+    }
+
+    function somar() {
+    //A linha abaixo iria CONCATENAR os valores e não somar!
+    //alert(`Soma: ${in_numero1.value + in_numero2.value}`)
+    //para que seja feita a soma, devemos CONVERTER os valores para nùmeros
+
+    alert(`Soma: ${Number(in_numero1.value) + Number(in_numero2.value)}`)
+
+    }
+</script>

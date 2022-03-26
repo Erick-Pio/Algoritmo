@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe o sabor desejado de sua pizza <br> 
+    <input id="in_pizza"> <br> <br>
+    
+    Qual o valor dessa pizza? <br>
+    <input id="in_valor"> <br> <br>
+    
+    Quantos amigos irão "rachar" a conta? <br>
+    <input id="in_rachar"> <br> <br>
+
+    <button onclick="conta()">Calcular por pessoa</button> 
+    
+    <br>
+    <div id="div_conta"></div>
+</body>
+</html>
+<script>
+
+function conta(){
+    
+    div_conta.innerHTML = `Cada amigo vai contribuir com R$${Number(in_valor.value) / Number(in_rachar.value)}
+    na pizza de ${in_pizza.value}`
+}
+
+
+</script>

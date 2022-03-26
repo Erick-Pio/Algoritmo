@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicite o valor bruto do sue salário
+    <input id="in_bruto"> <br>
+<span style="color: blue;"></span>
+    <button onclick="valor()">Descubra quanto vc receberá</button>
+
+    <div id="div_vava"></div>
+</body>
+</html>
+
+<script>
+    function valor() {
+        div_vava.innerHTML = 
+        `<span style="color: blue;">Apesar do seu bruto ser <b>R$ ${Number(in_bruto.value)}</b>, após os descontos, você receberá somente </span> 
+        <b style="color: green;">R$ ${Number(in_bruto.value) - (Number(in_bruto.value) * 0.33) }</b>`
+    }
+
+</script>

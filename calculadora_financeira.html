@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SPconsult</title>
+</head>
+
+<body>
+
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA <span style="color: rgb(175, 255, 255);">FINANCEIRA </span></h2>
+
+    Informe o nome da empresa
+    <input id="inp_nome"> <br> <br>
+
+    Informe a média do preço do seu produto
+    <input id="inp_preço"> <br> <br>
+
+    <button onclick="sei()">Sei meu desperdicio</button> &nbsp;
+    <button onclick="nao_sei()">Não sei meu desperdicio</button>
+    <br> <br>
+
+    <div id="div_nao_sei"></div>
+    <div id="div_avançar"></div>
+    <div id="div_calculo"></div>
+    <div id="div_desperdicio"></div>
+    
+</body>
+
+</html>
+
+<script>
+    function sei() {
+        div_avançar.innerHTML = `Informe o valor de desperdicio
+    <input id="inp_desperdicio"> <br> <br>
+    <button onclick="calculo()">Calcular como seria com a SPconsult</button>
+    <br> <br>
+    `
+    }
+    function nao_sei(){
+        div_avançar.innerHTML = `
+        informe o valor médio que é produzido pela empresa
+        <input id="in_produto"> <br> <br>
+        informe o valor médio de perda da empresa
+        <input id="in_perda"> <br> <br>
+        <button onclick="deperdicio()">Calcular desperdicio</button>
+        `
+    }
+    function deperdicio() {
+        div_desperdicio.innerHTML = `Seu desperdicio é de ${Number(in_produto.value) - Number (in_perda.value)} <br> <br>
+        <button onclick="calculo_desperdicio()">Calcular como seria com a SPconsult</button>
+        `
+    }
+
+    function calculo() {
+        
+        div_calculo.innerHTML = `${inp_desperdicio.value * 0.20}`
+    }
+    
+    function calculo_desperdicio() {
+        var calculo = Number(in_produto.value) - Number (in_perda.value)
+        div_calculo.innerHTML = `${calculo* 0.20}`
+    }
+</script>

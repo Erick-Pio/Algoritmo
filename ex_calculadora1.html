@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe o valor desejado para o cambiamento <br> 
+    <input id="in_reais"> <br> 
+    <button onclick="reais()">Converter para dólares</button> <br> <br>
+
+    <div id="div_dolar"></div>
+
+</body>
+</html>
+<script>
+
+    function reais(){
+
+        div_dolar.innerHTML = `R$${Number(in_reais.value)} dá U$${Number(in_reais.value / 5)}`
+
+    }
+
+
+</script>

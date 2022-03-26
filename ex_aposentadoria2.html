@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe sua idade <br>
+    <input id="in_idade"> <br> <br>
+
+    <button onclick="mulher()">Aposentadoria Feminina</button> &nbsp; &nbsp;
+    <button onclick="homem()">Aposentadora Masculina</button> 
+
+    <div id = "div_aposentadoria"></div>
+</body>
+</html>
+
+<script>
+    function mulher(){
+    div_aposentadoria.innerHTML = `
+    Se for <i>mulher</i> faltam ${Number (in_idade.value) - 60 } anos para você se aposentar :)
+     `
+    }
+
+
+    function homem(){
+    div_aposentadoria.innerHTML = `
+    Se for <i>homem</i> faltam ${Number (in_idade.value) - 70} anos para você se aposentar :)
+     `
+    }
+
+
+</script>

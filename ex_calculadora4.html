@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Informe o valor da temperatura em °C <br>
+   <input id="in_celsius"> <br> <br>
+
+    <button onclick="farenheit()">Converter para °F</button>
+
+    <br>
+
+    <div id="div_conversao"></div>
+
+</body>
+</html>
+<script>
+    function farenheit() {
+        div_conversao.innerHTML = `${Number(in_celsius.value)}°C equivale a 
+        ${Number(in_celsius.value * 1.8) + Number(32)}°F`
+
+
+
+    }
+
+
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SPconsult</title>
+</head>
+
+<body>
+
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA <span style="color: rgb(175, 255, 255);">FINANCEIRA </span></h2>
+
+    Informe o nome da empresa
+    <input id="inp_nome"> <br> <br>
+
+    Informe a média do preço do seu produto
+    <input id="inp_preço"> <br> <br>
+
+    Saberia nos informar o desperdicio médio da sua empresa?
+    <select id="sel_avançar">
+        <option onclick="sei()">Sim</option>
+        <option onclick="nao_sei">Não</option>
+    </select>
+    <br><br> 
+
+    <button onclick="avançar()">Sei meu desperdicio</button>
+    <br> <br>
+
+    <div id="div_nao_sei"></div>
+    <div id="div_avançar"></div>
+    <div id="div_calculo"></div>
+    
+</body>
+
+</html>
+
+<script>
+    function sei() {
+        div_avançar.innerHTML = `Informe o valor de desperdicio
+    <input id="inp_desperdicio"> <br> <br>
+    <button onclick="calculo()">Calcular como seria com a SPconsult</button>
+    <br> <br>
+    `
+    }
+    function nao_sei(){
+
+
+    }
+    
+    function calculo() {
+        div_calculo.innerHTML = `${inp_desperdicio.value * 0.20}`
+    }
+</script>

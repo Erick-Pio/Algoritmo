@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 23</title>
+</head>
+<body>
+    
+    <input placeholder="Quantos anos você tem?" id="inp_idade">
+    <br>
+    <button onclick="analisar()">analisar vida</button>
+
+    <div id="div_analise"></div>
+
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var idade = Number(inp_idade.value)
+        div_analise.innerHTML = `Você já viveu mais de ${idade*365} dias`
+        
+        //O if é uma estrutura de decisão
+        
+        if (idade >= 18){
+            div_analise.innerHTML  += '<br> E você é maior de idade'
+
+        }  if (idade == 20) {
+            div_analise.innerHTML  += '<br> Essa é a sua idade'
+        } else (idade < 3)
+        div_analise.innerHTML  += '<br> Você é um bebezinho'
+
+    }
+</script>

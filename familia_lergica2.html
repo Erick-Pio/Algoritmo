@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia Lérgica</title>
+</head>
+
+<body>
+    Quantas moedas Huguinho depositou?
+    <input id="in_huguinho"> <br>
+
+    Quantas moedas Zezinho depositou?
+    <input id="in_zezinho"> <br>
+
+    Quantas moedas Luizinho depositou?
+    <input id="in_luizinho"> <br>
+
+    <button onclick="moedas()">Clique para saber quanto cada um economizou</button>
+
+    <div id="div_moedas"></div>
+</body>
+
+</html>
+
+<script>
+    function moedas() {
+       div_moedas.innerHTML = `O <b>Huguinho</b> economizou <u>R$ ${Number(in_huguinho.value * 0.50)}</u>, pois fez <i><b>${Number(in_huguinho.value)}</b></i> depósitos <br>
+        O <b>Zezinho</b> economizou <u>R$ ${Number(in_zezinho.value * 0.50)}</u>, pois fez <i><b>${Number(in_zezinho.value)}</b></i> depósitos <br>
+        O <b>Luizinho</b> economizou <u>R$ ${Number(in_luizinho.value * 0.50)}</u>, pois fez <i><b>${Number(in_luizinho.value)}</b></i> depósitos`
+    
+    }
+</script>

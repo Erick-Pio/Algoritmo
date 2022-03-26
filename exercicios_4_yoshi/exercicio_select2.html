@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descontos</title>
+</head>
+<body>
+    
+        <h3 style="color: red;">Calcular descontos</h3>
+    
+    Selecione o desconto de salário
+    <select id="sel_desconto">
+        <option value="0.11">INSS</option>
+        <option value="0.25">IR</option>
+        <option value="0.02">Seguro de vida</option>
+    </select>
+    <br>    
+    Digite seu salário bruto
+    <input id="inp_bruto">
+    <br>
+
+    <button onclick="desconto()">Ver desconto</button>
+
+
+</body>
+</html>
+
+<script>
+    function desconto() {
+        var bruto = Number (inp_bruto.value)
+        var desc = bruto - (bruto * sel_desconto.value)
+        
+        alert (`O desconto sobre R$ ${bruto} será de R$ ${desc.toFixed(2)}`)
+    }
+
+</script>
