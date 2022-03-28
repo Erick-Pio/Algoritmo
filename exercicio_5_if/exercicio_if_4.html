@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio if 4</title>
+</head>
+<body>
+    <h3>Pizza's share machine</h3>
+
+    Qual o valor da pizza? <br>
+    <input id="inp_pizza"> <br>
+
+    Vocês estão em quantos amigos? <br>
+    <input id="inp_amigos"> <br>
+
+    <button onclick="pizza()">Rola a pizza?</button>
+
+    <div id="div_pizza"></div>
+</body>
+</html>
+
+<script>
+    function pizza() {
+        var conta = Number(inp_pizza.value) / Number(inp_amigos.value)
+
+        if(conta <= 20) {
+            div_pizza.innerHTML = `Cada amigo via pagar R$ ${conta.toFixed(2)}`
+        }
+        if(conta > 20){
+            div_pizza.innerHTML = `Cada amigo via pagar R$ ${conta.toFixed(2)} <br>
+            Deu ruim! Pizza muito cara!`
+        }
+
+    }
+
+</script>

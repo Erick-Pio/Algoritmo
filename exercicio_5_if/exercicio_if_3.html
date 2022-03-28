@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio if 3</title>
+</head>
+<body>
+    <h3>Os fora de série</h3>
+
+    Insira sua primeira nota <br>
+    <input id="inp_nota1"> <br> <br>
+
+    Insira sua segunda nota <br>
+    <input id="inp_nota2"> <br> <br>
+
+    Insira sua terceira nota <br>
+    <input id="inp_nota3"> <br> <br>
+
+    <button onclick="desempenho()">Analisar desempenho</button>
+
+    <div id="div_desempenho"></div>
+
+</body>
+</html>
+
+<script>
+    function desempenho() {
+        var media = (Number(inp_nota1.value) + Number(inp_nota2.value) + Number(inp_nota3.value)) / 3
+    
+        if(media < 9.4){
+            div_desempenho.innerHTML = `Sua média é ${media.toFixed(1)}`
+        }
+
+        if(media >= 9.4) {
+            div_desempenho.innerHTML = `Sua média é ${media.toFixed(1)}. <br>
+            Parabéns você é fora de série!`
+        }
+    }
+
+</script>

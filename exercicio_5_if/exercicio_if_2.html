@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio if 2</title>
+</head>
+<body>
+    Quantas latinhas de refrigerante você bebe por dia? <br>
+    <input placeholder="latinhas por dia" id="inp_refri">
+
+    <button onclick="refri()">Quantos refris?</button>
+
+    <div id="div_refri"></div>
+</body>
+</html>
+
+<script>
+
+        
+    
+    function refri(){
+        
+        var latinhas = Number(inp_refri.value * 365)
+
+        if(latinhas < 500){
+        div_refri.innerHTML = `Você consome ${latinhas} por ano`
+        }
+
+        if(latinhas > 499){
+            div_refri.innerHTML = `Você consome ${latinhas} por ano <br>
+            Cuidado com a diabetes`
+        }
+
+    }
+
+</script>
