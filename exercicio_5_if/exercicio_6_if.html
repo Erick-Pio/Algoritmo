@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 if</title>
+</head>
+<body>
+    <h2>Calculadora de energia</h2>
+
+    Quantidade de kWh consumida por mês <br>
+    <input id="inp_kwh"> <br> <br>
+
+    <button onclick="luz()">Calcular a conta de luz</button>
+</body>
+</html>
+
+<script>
+    function luz() {
+        var kwh = Number(inp_kwh.value)
+        var conta = (Number(inp_kwh.value) * 0.85)
+        var conta_desc = ((Number(inp_kwh.value) * 0.85 * 0.9))
+
+        if(kwh < 100) {
+            alert(`O valor a pagar é de R$ ${conta_desc.toFixed(2)}`) 
+        }
+        if(kwh >= 100){
+            alert(`O valor a pagar é de R$ ${conta}`)
+        }
+    }
+
+</script>

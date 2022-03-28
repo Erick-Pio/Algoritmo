@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13 if</title>
+</head>
+<body>
+        <h3>Analisador de famílias</h3>
+    
+    Quantos filhos você tem? <br>
+    <input placeholder="Quantos filhos" id="inp_filhos"> <br> <br>
+
+    <button onclick="familia()">Analisar familia</button> <br>
+
+    <div id="div_familia"></div>
+</body>
+</html>
+
+<script>
+    function familia() {
+        var filho = Number(inp_filhos.value)
+
+        div_familia.innerHTML = ``
+
+        if(filho >= 1){
+            div_familia.innerHTML = ` <br> Não tem TV`
+        }
+
+        if(filho >= 2){
+            div_familia.innerHTML += `<br> Não tem internet`
+        }
+
+        if(filho >= 3){
+            div_familia.innerHTML += `<br> Não tem video game`
+        }
+
+        if(filho >= 4){
+            div_familia.innerHTML += `<br> Não tem netflix`
+        }
+
+    }
+
+</script>

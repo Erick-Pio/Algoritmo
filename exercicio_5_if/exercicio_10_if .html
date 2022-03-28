@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 if</title>
+</head>
+<body>
+    <h2>Quanto cabe no elevador?</h2>
+
+    Quantos homens entraram no elevador?<br>
+    <input id="inp_homem"> <br>
+
+    Quantas mulheres entraram no elevador? <br>
+    <input id="inp_mulher"> <br><br> 
+
+    <button onclick="elevador()">Analisar peso</button>
+
+    <div id="div_elevador"></div>
+</body>
+</html>
+
+<script>
+    function elevador(){
+        var homem = Number(inp_homem.value) * 80
+        var mulher = Number(inp_mulher.value) * 60
+        var peso = homem + mulher
+
+        
+        div_elevador.innerHTML = `Este elevador suporta 800kg e o peso desta lotação é ${peso.toFixed(1)} kg`
+
+        if(peso >= 1000){
+               div_elevador.innerHTML += `<br> <span style="color: red;">
+                Alguém precisa descer para o elevador subir</span>`
+            }
+        
+        if(peso > 800) {
+            div_elevador.innerHTML += `<br> <span style="color: blue;">
+                Alguém precisa descer para o elevador subir</span>`
+        }
+    
+
+    }
+
+</script>

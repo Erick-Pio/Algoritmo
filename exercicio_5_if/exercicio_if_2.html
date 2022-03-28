@@ -8,7 +8,7 @@
 </head>
 <body>
     Quantas latinhas de refrigerante você bebe por dia? <br>
-    <input placeholder="latinhas por dia" id="inp_refri">
+    <input placeholder="latinhas por dia" id="inp_refri"> <br> <br>
 
     <button onclick="refri()">Quantos refris?</button>
 
@@ -25,11 +25,11 @@
         var latinhas = Number(inp_refri.value * 365)
 
         if(latinhas < 500){
-        div_refri.innerHTML = `Você consome ${latinhas} por ano`
+        div_refri.innerHTML = `Você consome ${latinhas} latinhas por ano`
         }
 
-        if(latinhas > 499){
-            div_refri.innerHTML = `Você consome ${latinhas} por ano <br>
+        if(latinhas >= 500){
+            div_refri.innerHTML = `Você consome ${latinhas} latinhas por ano <br>
             Cuidado com a diabetes`
         }
 
