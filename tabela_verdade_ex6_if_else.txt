@@ -1,0 +1,43 @@
+Exercicio if-else
+
+1.
+Idade     Cnh    Playstation
+17         não      Sim
+18         sim       não
+16         não        sim
+20         sim       não
+
+2.
+Saldo    Débito         Saldo azul itálico   saldo vermelho negrito
+100       200             não                         sim
+100       100             Sim                         não 
+200        50             Sim                         não
+20         30             Não                         sim
+
+3.
+Chocolates comprados   Desconto
+12                       não
+13                       sim
+10                       não
+11                       não
+
+4.
+Frequencia  foto de turista  foto de aluno estudioso
+30               sim              não
+50               não              sim
+70               não              sim
+49               sim              não
+
+5.
+Nota1    Nota2  média Aprovado
+6          6      6    sim
+5          5      5    não
+10         9      9    sim
+3          7      5    não
+
+6.
+temperatura do ambiente    apropriada para conservar  inapropriada para conservar
+10                                 não                         sim
+9                                  sim                         não
+20                                 não                         sim
+3                                  sim                         não

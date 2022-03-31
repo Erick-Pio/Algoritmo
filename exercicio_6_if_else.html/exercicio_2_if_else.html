@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 if-else</title>
+</head>
+<body>
+    
+    <h2>Saldos</h2>
+
+    Qual o saldo da sua conta? <br>
+    <input placeholder="Valor do saldo da conta" id="inp_saldo"> <br>
+
+    Qual o valor do seu débito <br>
+    <input placeholder="Valor do débito" id="inp_debito"> <br> <br>
+
+    <button onclick="conta()">Analisar conta</button>
+
+    <div id="div_conta"></div>
+</body>
+</html>
+
+<script>
+    function conta() {
+        var saldo = Number(inp_saldo.value)
+        var debito = Number(inp_debito.value)
+
+        if(saldo >= debito){
+            div_conta.innerHTML = `<i style="color: blue;">O saldo atual da sua conta é R$ ${saldo - debito}</i>`
+        }
+
+        else{
+            div_conta.innerHTML = `<b style="color: red;">O saldo atual da sua conta é R$ ${saldo - debito}</b>`
+        }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 if-else</title>
+</head>
+<body>
+    <h3>Auxilio para identificar novos alunos</h3>
+
+    Qual o seu nome?<br>
+    <input placeholder="Informe seu nome" id="inp_nome"> <br>
+
+    Qual a sua idade? <br>
+    <input placeholder="Informe sua idade" id="inp_idade"> <br> <br>
+
+    <button onclick="aluno()">Avaliar aluno</button>
+</body>
+</html>
+
+<script>
+    function aluno() {
+        var idade = Number(inp_idade.value)
+        var nome = (inp_nome.value)
+
+        if(idade >= 18){
+            alert (`${nome} Vamos tirar sua CNH?`)
+        }
+
+        else {
+            alert (`${nome} Vai jogar playstation!`)
+        }
+    }
+</script>

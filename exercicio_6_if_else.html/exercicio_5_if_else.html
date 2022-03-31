@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5 if-else</title>
+</head>
+<body>
+    
+    <h2>Média do aluno</h2>
+
+    Qual nota da primeira prova <br>
+    <input placeholder="nota 1" id="inp_nota1"> <br>
+
+    Qual nota da segunda prova <br>
+    <input placeholder="nota 2" id="inp_nota2"> <br> <br>
+
+    <button onclick="media()">Calcular média</button>
+</body>
+</html>
+
+<script>
+    function media(){
+        var nota1 = Number(inp_nota1.value)
+        var nota2 = Number(inp_nota2.value)
+        var resultado = (nota1 + nota2) / 2
+
+        if(resultado < 6) {
+            alert(`Tente outra vez...`)
+        }
+        else{
+            alert(`Parabéns, aprovado!`)
+        }
+    }
+</script>

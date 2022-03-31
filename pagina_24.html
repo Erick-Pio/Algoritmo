@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 24 if</title>
+</head>
+<body>
+    
+        <h2>Ir ao trabalho</h2>
+
+    <input placeholder="Quantos km vc mora do trabalho" id="inp_distancia"> <br>
+
+    <button onclick="trajeto()">Analisar trajeto</button>
+</body>
+</html>
+
+<script>
+    function trajeto() {
+        var distancia = Number(inp_distancia.value)
+
+        if (distancia > 1) {
+            alert ("Você precisa usar algum transporte para chegar")
+        } 
+        else {
+            alert ("Você pode ir a pé ao trabalho")
+        }
+    }
+</script>

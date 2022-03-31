@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 if-else</title>
+</head>
+<body>
+   
+    <h2>Frequência aluno</h2>
+
+    Informe a frequência do aluno <br>
+    <input placeholder="Frequência" id="inp_freq"> <br> <br>
+
+    <button onclick="aluno()">Analisar frequência</button> <br>
+
+    <div id="div_imagem"></div>
+</body>
+</html>
+
+<script>
+    function aluno() {
+        var frequencia = Number(inp_freq.value)
+
+        if(frequencia < 50) {
+            div_imagem.innerHTML = ` <img src="https://st.depositphotos.com/2117297/2868/i/600/depositphotos_28680923-stock-photo-happy-tourists-taking-photo-of.jpg">`
+        }
+        else{
+            div_imagem.innerHTML = `<img src="https://cdn.xxl.thumbs.canstockphoto.com.br/tabela-aluno-senta-se-homework-foto_csp83367014.jpg">`
+        }
+    }
+</script>
