@@ -7,34 +7,24 @@
     <title>Exercicio 1</title>
 </head>
 <body>
-    <h2>Vingadores</h2>
-    <div id="div_vng">Capitão America, <span id="s_heroi1">Falcão, Wanda, Doutor Estranho</span>, Homem de Ferro, <span id="s_heroi2"> Pantera Negra,</span>Thor e <span>Homem Aranha</span></div> <br>
     
-    <Select id="sel_estalos" onchange="vingador()">
-        <option value="">-- Qual o estalo? --</option>
-        <option value="thanos">-Estalo do Thanos</option>
-        <option value="Hulk">-Estalo do Hulk</option>
-    </Select>
-    
+    <h2>Temperatura ideal</h2>
+
+    Qual a temperatura atual?
+    <input id="inp_temp">
+
+    <button onclick="temp()">Ver situação</button>
 </body>
 </html>
 <script>
-    function vingador() {
-    var estalo = sel_estalos.value
+    function temp() {
+        var temperatura = Number(inp_temp.value)
 
-    if(estalos != nenhum) {
-        var visibilidade = ''
-
-        if(estalo == 'thanos') {
-            visibilidade = 'none'
-        } else{
-            visibilidade = 'inline'
+        if(temperatura > 20 && temperatura < 25){
+            alert(`Temperatura confortável 0x1F600`)
+        }else{
+            alert(`Temperatura desconfortável 0x2639`)
         }
-        s_heroi1.style.display = visibilidade
-        s_heroi2.style.display = visibilidade
-        s_heroi3.style.display = visibilidade
-        s_heroi4.style.display = visibilidade
-        s_heroi5.style.display = visibilidade
     }
-    }
+
 </script>
