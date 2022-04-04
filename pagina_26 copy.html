@@ -12,7 +12,7 @@
 
     <input placeholder="Média" id="inp_media">
     <input placeholder="Frequência" id="inp_freq">
-    <input placeholder="Semestre" id="inp_semestre">
+    <input placeholder="Semestre" id="inp_semestre" onkeyup="avaliar2()">
     <br>
     <button onclick="avaliar()">Avaliar</button>
 </body>
@@ -28,9 +28,19 @@
         } else{
             alert('Não foi dessa vez :(')
         }
+    }
+       
+    function avaliar2(){
+        var media = Number (inp_media.value)
+        var freq = Number (inp_freq.value)
+        var semestre = Number (inp_semestre.value)
 
-        if(media >= 6 && freq >=75 && semestre > 2){
+    if(media >= 6 && freq >=75 && semestre >= 2){
             alert('Você já pode ir para o estágio')
+        }
+
+        if(media >= 6 && freq >=75 && semestre == 1){
+            alert('Você ainda não pode ir para o estágio')
         }
     }
 </script>
