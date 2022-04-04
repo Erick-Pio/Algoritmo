@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 26</title>
+</head>
+<body>
+    
+    <h3>Aprovado/Reprovado</h3>
+
+    <input placeholder="Média" id="inp_media">
+    <input placeholder="Frequência" id="inp_freq">
+    <br>
+    <button onclick="avaliar()">Avaliar</button>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var media = Number (inp_media.value)
+        var freq = Number (inp_freq.value)
+
+        if(media >= 6 && freq >=75) {
+            alert('Parabéns, aprovado!')
+        } else{
+            alert('Não foi dessa vez :(')
+        }
+    }
+</script>

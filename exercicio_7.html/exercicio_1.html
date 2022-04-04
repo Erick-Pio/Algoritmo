@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <h2>Vingadores</h2>
+    <div id="div_vng">Capitão America, <span id="s_heroi1">Falcão, Wanda, Doutor Estranho</span>, Homem de Ferro, <span id="s_heroi2"> Pantera Negra,</span>Thor e <span>Homem Aranha</span></div> <br>
+    
+    <Select id="sel_estalos" onchange="vingador()">
+        <option value="">-- Qual o estalo? --</option>
+        <option value="thanos">-Estalo do Thanos</option>
+        <option value="Hulk">-Estalo do Hulk</option>
+    </Select>
+    
+</body>
+</html>
+<script>
+    function vingador() {
+    var estalo = sel_estalos.value
+
+    if(estalos != nenhum) {
+        var visibilidade = ''
+
+        if(estalo == 'thanos') {
+            visibilidade = 'none'
+        } else{
+            visibilidade = 'inline'
+        }
+        s_heroi1.style.display = visibilidade
+        s_heroi2.style.display = visibilidade
+        s_heroi3.style.display = visibilidade
+        s_heroi4.style.display = visibilidade
+        s_heroi5.style.display = visibilidade
+    }
+    }
+</script>

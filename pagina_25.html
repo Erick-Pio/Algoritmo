@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 25</title>
+</head>
+<body>
+    <h2>Qual o dobro e a metade?</h2>
+
+    <input placeholder="Digite um número" id="inp_numero" onkeyup="calcular()"> <br>
+
+    <select id="sel_numero" onchange="metade()">
+        <option value="">-- Selecione um número --</option>
+        <option value="10">10</option>
+        <option value="144">144</option>
+        <option value="12.5">12.5</option>
+    </select> <br>
+
+    <img src="http://www.pudim.com.br/pudim.jpg" width="250px" onclick="limpar()">
+
+    <div id="div_dobro"></div>
+    <div id="div_metade"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        div_dobro.innerHTML = `O dobro é ${Number(inp_numero.value) * 2}`
+    }
+
+    function metade() {
+        div_metade.innerHTML = `A metade é ${Number(sel_numero.value) / 2}`
+    }
+
+    function limpar() {
+        div_dobro.innerHTML = ""
+        div_metade.innerHTML = ""
+    }
+</script>
