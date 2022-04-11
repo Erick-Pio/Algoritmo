@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 10</title>
+</head>
+<body>
+    
+    <h2>Processo seletivo de pilotos</h2>
+
+    Qual a altura inicial para que a seleção ocorra? <br>
+    <input placeholder="Altura inicial" id="inp_inicial"> <br>
+
+    Qual a altura máxima para que a seleção ocorra? <br>
+    <input placeholder="Altura final" id="inp_final"> <br>
+
+    Qual o nome do candidato? <br>
+    <input placeholder="Nome" id="inp_nome"> <br>
+
+    Qual a altura do candidato?? <br>
+    <input placeholder="altura" id="inp_altura"> <br>
+
+    <button onclick="selecao()">Ir para seleção</button>
+</body>
+</html>
+<script>
+    
+    var inicial = Number(inp.inicial.value)
+    var final = Number(inp_final.value)
+
+    function selecao() {
+        if(inicial <= 0) {
+            alert('Não é possivel continuar')
+        }
+    }
+</script>

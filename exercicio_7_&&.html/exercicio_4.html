@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 04</title>
+</head>
+<body>
+    
+        <h2>Ser ou não ser vegano?</h2>
+
+        
+        <select id="sel_cafe">
+            <option value="">- Qual o café da manhã -</option>
+            <option value="nao">ovos</option>
+            <option value="sim">Leite de arroz</option>
+            <option value="nao">Bacon</option>
+        </select>
+        <br>
+        <select id="sel_almoco">
+            <option value="">- O que almoça -</option>
+            <option value="nao">Bife</option>
+            <option value="sim">Hamburguer de soja</option>
+            <option value="nao">Frango grelhado</option>
+        </select>
+        <br>
+        <select id="sel_janta">
+            <option value="">- O que Janta -</option>
+            <option value="sim">- Picanha de soja -</option>
+            <option value="nao">- Cupim -</option>
+            <option value="nao">- Coração -</option>
+        </select> <br>
+        
+        <button onclick="sou_vegano()">Sou vegano</button>
+</body>
+</html>
+<script>
+    function sou_vegano() {
+        var cafe = sel_cafe.value
+        var almoco = sel_almoco.value
+        var janta = sel_janta.value
+        
+        if(cafe == 'sim' && almoco == 'sim' && janta == 'sim'){
+            alert('Você é vegano(a)')
+        }else {
+            alert('Você não é vegano(a)')
+        }
+    }
+
+</script>

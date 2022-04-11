@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 27</title>
+</head>
+<body>
+    <h2>Alerta de Temperatura</h2>
+
+    <input placeholder="Temperatura" id="inp_temp">
+    <br>
+    <button onclick="alerta()">Vai emitir um alerta?</button>
+</body>
+</html>
+<script>
+    function alerta() {
+        var temp = Number(inp_temp.value)
+
+        if(temp < 15 || temp >17){
+            alert('ALERTA DE TEMPERATURA')
+        }
+    }
+</script>

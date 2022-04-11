@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 04</title>
+</head>
+<body>
+
+    <h2 style="color: aqua;">Parcelmaneto na compra</h2>
+    
+    <select id="sel_combo">
+        <option value="">-- Escolha a opção de pagamento --</option>
+        <option value="sim">Dinheiro</option>
+        <option value="sim">Cartão de débito</option>
+        <option value="nao">Cartão de crédito</option>
+        <option value="nao">Boleto</option>
+    </select>
+
+    <button onclick="compra()">Analisar compra</button>
+</body>
+</html>
+<script>
+    function compra(){
+        var frase = ''
+        var combo = sel_combo.value
+        
+        if(combo == 'sim' ){
+            frase = `Você terá que pagar a vista`
+        }else{
+            frase = `Você pode parcelar`
+        }alert(frase)
+    }
+</script>

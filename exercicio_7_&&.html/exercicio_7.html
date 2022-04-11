@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 07</title>
+</head>
+<body>
+    
+    <h2>Aluno aprovado?</h2>
+
+    Qual a sua nota? <br>
+    <input placeholder="Nota" id="inp_nota"> <br>
+    
+    Qual sua frequência? <br>
+    <input placeholder="frequência (%)" id="inp_freq"> <br>
+
+    <button onclick="avaliar()">Avaliar aluno...</button>
+</body>
+</html>
+
+<script>
+    function avaliar() {
+        var nota = Number(inp_nota.value)
+        var freq = Number(inp_freq.value)
+
+        if(nota >= 6 && freq >= 75){
+            alert('Parabéns aprovado!')
+        }else{
+            alert('Infelizmente não foi dessa vez')
+        }
+    }
+</script>

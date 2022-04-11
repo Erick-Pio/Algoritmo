@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 05</title>
+</head>
+<body>
+    
+    <h2 style="color: aqua;">Temperatura idela</h2>
+
+    <input placeholder="Temperatura atual" id="inp_temp">
+    <br>
+    <button onclick="temperatura()">Analisar clima</button>
+</body>
+</html>
+<script>
+    function temperatura() {
+        var temp = inp_temp.value
+        var frase = ''
+
+        if(temp >=21 && temp <= 24){
+
+        }
+        if (temp < 21 || temp > 24){
+            frase = `Alerta de desconforto!`
+            alert(frase)
+        }if(temp > 24) {
+            frase = `As pessoas vão derreter`
+            alert(frase)
+        }
+        if(temp < 21){
+            frase = `As pessoas vão ter hipotermia`
+            alert(frase)
+        }
+    }
+
+</script>

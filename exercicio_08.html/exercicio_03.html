@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 03</title>
+</head>
+<body>
+    
+    <h2 style="color: red;">Covid 19 </h2>
+    
+    Para saber se tem direito a ajuda emergencial: <br>
+    <input placeholder="Sua renda individual" id="inp_renda"> <br>
+
+    <input placeholder="Sua renda familiar" id="inp_familia"> <br>
+
+    <button onclick="beneficio()">Terei o benefício</button>
+</body>
+</html>
+<script>
+    function beneficio() {
+        var individual = Number(inp_renda.value)
+        var familia = Number(inp_familia.value)
+        var frase = ''
+
+        if(individual <= 2000 || familia <= 3000){
+            frase = `Você terá direito ao auxílio`
+        }else {
+            frase = `Você não terá direito ao auxílio`
+        }
+        alert(frase)
+    }
+</script>

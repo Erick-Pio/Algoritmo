@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 02</title>
+</head>
+<body>
+    
+    <h2>Mentes brilhantes</h2>
+
+    <input placeholder="Solicite a nota do ENEM" id="inp_enem"> <br>
+
+    <input placeholder="Solicite a nota do vestibular" id="inp_vest"> <br>
+
+    <button onclick="avaliar()">Avaliar</button>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var enem = Number(inp_enem.value)
+        var vest = Number(inp_vest.value)
+        var frase = ""
+
+        if(enem == 800 || vest == 700){
+            frase = `Parabéns, aprovado!`
+        }else {
+            frase = `Tente semestre que vem`
+        }
+        alert(frase)
+    }
+</script>
