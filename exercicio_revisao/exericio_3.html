@@ -43,6 +43,18 @@
         if(passageiros == 'meia' && passagem == 'unica'){
             frase = `Valor da passagem escolhida = R$ ${Number(4.40) * Number(0.50).toFixed(2)}`
         }
+
+        if(passageiros == 'meia' && passagem == 'integracao'){
+            frase = `Valor da passagem escolhida = R$ ${Number(5.90) * Number(0.50).toFixed(2)}`
+        }
+
+        if(passageiros == 'gratis' && passagem == 'unica'){
+            frase = `Sua passagem será de graça`
+        }
+
+        if(passageiros == 'gratis' && passagem == 'integracao'){
+            frase = `Sua passagem será de graça`
+        }
         div_valor.innerHTML = frase
     }
 </script>

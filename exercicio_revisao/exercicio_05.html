@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 05</title>
+</head>
+<body>
+    
+    <h2>Clima Ambiente</h2>
+
+    <input placeholder="Qual a temperatura?" id="inp_temperatura">
+    <br>
+    <input placeholder="Qual a umidade do ar?" id="inp_umidade">
+    <br>
+    <button onclick="avaliar()">Avaliar clima</button>
+    
+    <div id="div_frase"></div>
+</body>
+</html>
+<script>
+    
+    function avaliar() {
+        var temperatura = Number(inp_temperatura.value)
+        var umidade = Number(inp_umidade.value)
+        var frasediv = ''
+        var frasealert = ''
+
+        if(umidade < 0 || umidade > 100){
+            frasealert = `Valor de umidade inválido`
+            frasediv = ''
+            alert(frasealert)
+        } else{
+            if((temperatura >= 22 && temperatura <= 23) && umidade < 60)
+            frasediv = `Temperatura confortável`
+        } if((temperatura < 22 || temperatura > 23) || umidade > 60) {
+            frasediv = `Temperatura desconfortável`
+        }
+        div_frase.innerHTML = frasediv
+        
+    }
+</script>

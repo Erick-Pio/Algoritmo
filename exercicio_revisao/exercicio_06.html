@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 06</title>
+</head>
+<body>
+    
+    <h2>Como cozinhar arroz</h2>
+
+    Qual arroz está usando? <br>
+    <select id="sel_combo">
+        <option value="branco">Arroz Branco</option>
+        <option value="integral">Arroz Integral</option>
+    </select>
+
+    <br>
+
+    Qual o tempo de cozimento? <br>
+    <input placeholder="minutos" id="inp_tempo">
+
+    <br>
+
+    Qual a quantidade de sal? <br>
+    <input placeholder="gramas" id="inp_sal">
+    <br>
+
+    <button onclick="avaliar()">Avaliar arroz</button>
+
+    <div id="div_res"></div>
+
+</body>
+</html>
+<script>
+    function avaliar() {
+        var arroz = sel_combo.value
+        var tempo = inp_tempo.value
+        var sal = inp_sal.value
+        var frase = ''
+
+        if((arroz == 'branco' && tempo == '10' && sal == '10') || (arroz == 'integral' && tempo == '20' && sal == '15')){
+            frase = 'Arroz perfeito'
+        } else{
+            frase = 'Seu arroz não está perfeito'
+        }
+        div_res.innerHTML = frase
+    }
+</script>

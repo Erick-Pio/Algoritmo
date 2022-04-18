@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 04</title>
+</head>
+<body>
+    
+    <h2>Banco Melete</h2>
+
+    <input placeholder="login" id="inp_login">
+    <br>
+    <input placeholder="Senha" id="inp_senha">
+    <br>
+    <input placeholder="Informação pessoal" id="inp_info">
+    <br>
+    <button onclick="autenticar()">Autenticar</button>
+
+    <div id="div_frase"></div>
+</body>
+</html>
+<script>
+    function autenticar() {
+        var login = inp_login.value
+        var senha = inp_senha.value
+        var info = inp_info.value
+        var frase = ''
+
+        if(login == 'ana' && senha == 'braga' && (info == '1960' || info == 'louro josé')){
+            frase = 'Usuário atenticado'
+        } else {
+            frase = 'Falha na autenticação'
+        }
+        div_frase.innerHTML = frase
+    }
+</script>
