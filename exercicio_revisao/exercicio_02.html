@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 02</title>
+</head>
+<body>
+    
+    <h2>Tinder</h2>
+
+    Qual a cor do cabelo da moça? <br>
+    
+    <br>
+
+    <select id="sel_combo">
+        <option value="sim">Preto</option>
+        <option value="sim">Vermelho</option>
+        <option value="nao">Amarelo</option>
+        <option value="nao">Castanho</option>
+    </select>
+
+    <br>
+    
+    Qual a altura da moça? <br>
+    <input id="inp_altura">
+    <br>
+
+    <button onclick="match()">Deu match?</button>
+    <br>
+
+    <div id="div_imagem"></div>
+</body>
+</html>
+<script>
+    function match() {
+        var cabelo = sel_combo.value
+        var altura = inp_altura.value
+
+        if(cabelo == 'sim' && altura >= 1.71) {
+            div_imagem.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY97BP_r527ABETBGBQopcb9vqpHu2Lk9HHg&usqp=CAU">`
+        } else {
+            div_imagem.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJ8KNNndDo6X8DSyBJlNe0DwG_J46qaFLYVF0ZVQVKVxPgzfQACQc9m1Xy_Vg1suq16I&usqp=CAU">`
+        }
+    }
+</script>

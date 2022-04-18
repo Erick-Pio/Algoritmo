@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 03</title>
+</head>
+<body>
+    
+    <h2>Simulador de preço</h2>
+
+
+    <select id="sel_passageiros">
+        <option value="cheio">Comum</option>
+        <option value="meia">Estudante</option>
+        <option value="gratis">Idoso/PNE</option>
+    </select>
+    <br>
+    <select id="sel_passagem">
+        <option value="unica">Passagem única</option>
+        <option value="integracao">Passaegm integração</option>
+    </select>
+
+    <button onclick="preco()">Simluar preço</button>
+
+    <div id="div_valor"></div>
+</body>
+</html>
+<script>
+    function preco() {
+        var passageiros = sel_passageiros.value
+        var passagem = sel_passagem.value
+        var frase = ""
+
+        if(passageiros == 'cheio' && passagem == 'unica'){
+            frase = `Valor da passagem escolhida = R$ 4.40`
+        }
+        if(passageiros == 'cheio' && passagem == 'integracao'){
+            frase = `Valor da passagem escolhida = R$ 5.90`
+        }
+
+        if(passageiros == 'meia' && passagem == 'unica'){
+            frase = `Valor da passagem escolhida = R$ ${Number(4.40) * Number(0.50).toFixed(2)}`
+        }
+        div_valor.innerHTML = frase
+    }
+</script>
