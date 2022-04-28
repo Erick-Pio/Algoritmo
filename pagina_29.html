@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 29</title>
+</head>
+<body>
+    
+    <h2>Meta financeira</h2>
+
+    Quanto você já ganhou?  
+    <input id="inp_guardado" onkeyup="atualizar()">
+    <br><br>
+    Sua meta é de R$1.000,00. Veja a quanto você está dela:
+    <div id="div_barra" style="height: 20px; width: 0px; background-color: blue;"></div>
+    
+</body>
+</html>
+<script>
+    var meta = 1000
+
+    function atualizar(){
+        var porcentagem_atual = Number(inp_guardado.value) / meta
+        // considerando que 500px é o tamanho máximo da barra
+        var largura_barra = 500 * porcentagem_atual
+
+        div_barra.style.width = `${largura_barra}px`
+
+        //se a porcentagem for menor que 0.7(70%) a cor de fundo deve ser vermelha, caso contrario deve ser verde
+
+        var cor = ''
+        if(porcentagem_atual < 0.7){
+         cor = `red`
+        } else{
+         cor = `Green`    
+        }
+        
+        //para recuperar ou alterar elementos em css usamos o camel case
+        div_barra.style.backgroundColor = cor
+       
+       
+        /*
+        div_barra.style['background-color'] = cor
+        também funcionaria, caso queira usar o kebab case
+        */
+
+        /*
+        porcentagem_atual -> snake case
+        background-color -> kebab case ou css case
+        backgroundColor -> camel case
+        BackgtoundColor -> pascal case
+        */
+    }
+</script>

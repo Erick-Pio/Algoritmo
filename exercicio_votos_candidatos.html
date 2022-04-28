@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto de candidatos</title>
+</head>
+<body>
+
+    <h2>Voto de candidatos</h2>
+
+    Quantos votos teve o candidato 1? <input id="inp_candi1" onkeyup="votar()">
+    <br>
+    Quantos votos teve o candidato 2? <input id="inp_candi2" onkeyup="votar()">
+    <br>
+
+    <div id="div_barra1" style="height: 20px; width: 0px; background-color: green;"></div>
+    <div id="div_barra2" style="height: 20px; width: 0px; background-color: blue;"></div>
+    
+</body>
+</html>
+<script>
+    var maximo = 199
+    
+    function votar() {
+        var candidato1 = Number(inp_candi1.value)
+        var candidato2 = Number(inp_candi2.value)
+        var soma = candidato1 + candidato2
+        var alerta = ""
+        
+
+        if(soma > 199){
+            alerta = 'Número máximo de votos é 200'
+            alert(alerta)
+            return
+        }
+            var largura1 = candidato1 * 2
+            var largura2 = candidato2 * 2
+            div_barra1.style.width = `${largura1}px`
+            div_barra2.style.width = `${largura2}px`
+
+    }
+</script>

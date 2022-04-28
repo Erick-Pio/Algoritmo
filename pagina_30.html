@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 30</title>
+</head>
+<body>
+
+    <input placeholder="Digite uma frase" id="inp_frase" onkeyup="analisar()">
+    <br>
+    <p id="p_analise"></p>
+    
+</body>
+</html>
+<script>
+    function analisar() {
+        var frase = inp_frase.value
+
+        var caracteres = frase.length
+        p_analise.innerHTML = ` A frase tem <br>
+            ${caracteres} caracteres <br>
+            a 1° letra é ${frase[0]} <br>
+            a 4° letra é ${frase[3]}
+            a ultima letra é ${frase[frase.length-1]} <br>`
+
+            if(frase.indexOf('x') > -1) {
+                p_analise.innerHTML += `Tem a letra "x" na posição ${frase.indexOf('x')}<br>`
+            }
+
+            p_analise.innerHTML += `Em caixa ALTA fica ${frase.toUppercase()} <br>
+                                    Em caixa baixa fica ${frase.toLowercase()} <br>`
+            if(frase.toLowercase().indexOf('b') >= 0){
+            p_analise.innerHTML += 'Tem a letra "b" ou "B"'}
+
+
+            p_analise.innerHTML +=`
+            São ${frase.trim().length} caracteres fora os espaços e, branco do início <br>
+            `
+        //trim()
+    }
+</script>
