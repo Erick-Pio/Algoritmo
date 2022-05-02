@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página - 33</title>
+</head>
+<body>
+    
+    <h2>Comparação de campanhas</h2>
+
+    <h3> País 1</h3>
+    <input placeholder="Medalhas de ouro" id="inp_ouro1"> <br>
+    <input placeholder="Medalhas de prata" id="inp_prata1"> <br>
+    <input placeholder="Medalhas de bronze" id="inp_bronze1"> <br>
+    
+    <h3> País 2</h3>
+    <input placeholder="Medalhas de ouro" id="inp_ouro2"> <br>
+    <input placeholder="Medalhas de prata" id="inp_prata2"> <br>
+    <input placeholder="Medalhas de bronze" id="inp_bronze2"> <br>
+
+    <br> <button onclick="comparar()">Compara</button>
+
+    <div id="div_paises"></div>
+</body>
+</html>
+<script>
+
+    var pais1 = {
+        ouro: 0,
+        prata: 0,
+        bronze: 0,
+        Pontuacao: 0
+    }
+
+    var pais2 = {
+        ouro: 0,
+        prata: 0,
+        bronze: 0,
+        Pontuacao: 0
+    }
+
+    function comparar() {
+        pais1.ouro = Number(inp_ouro1.value)
+        pais1.prata = Number(inp_prata1.value)
+        pais1.bronze = Number(inp_bronze1.value)
+
+        pais2.ouro = Number(inp_ouro2.value)
+        pais2.prata = Number(inp_prata2.value)
+        pais2.bronze = Number(inp_bronze2.value)
+
+        // ouro vale 100pts, prata vale 10pts e bronze vale 1pt
+        pais1.pontuacao = pais1.ouro*100 + pais1.prata*10 + pais1.bronze
+        pais2.pontuacao = pais2.ouro*100 + pais2.prata*10 + pais2.bronze
+
+        div_paises.innerHTML = `
+    Ouro do pais 1 = ${pais1.ouro} <br>
+    Prat do pais 1 = ${pais1.prata} <br>
+    Bronze do pais 1 = ${pais1.bronze} <br>
+    Pontuação do pais 1 = ${pais1.pontuacao} <br> <br>
+
+    Ouro do pais 2 = ${pais2.ouro} <br>
+    Prat do pais 2 = ${pais2.prata} <br>
+    Bronze do pais 2 = ${pais2.bronze} <br>
+    Pontuação do pais 2 = ${pais2.pontuacao} <br>
+    `
+    }
+</script>

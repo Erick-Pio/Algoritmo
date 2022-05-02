@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 1</title>
+</head>
+<body>
+    
+    <h2>Salário</h2>
+
+    <input placeholder="Informe seu salário" id="inp_salario" onkeyup="analisar()">
+
+    <div id="div_analise"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var salario = Number(inp_salario.value)
+
+        var morar = salario > 2000
+        var filho1 = salario > 3000
+        var filho2 = salario > 5000
+        var BMW = salario > 6000
+
+        div_analise.innerHTML = `
+        Você já pode morar sozinho: ${morar ? 'sim' : 'Não'}
+    <br>Você já pode criar 1 filho: ${filho1 ? 'sim' : 'Não'}
+    <br>Você já pode criar 2 filho: ${filho2 ? 'sim' : 'Não'}
+    <br>Você já pode ter e manter uma BMW: ${BMW ? 'sim' : 'Não'}
+        `
+    }
+</script>

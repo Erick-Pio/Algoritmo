@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 34</title>
+</head>
+<body>
+    
+    <h2>Análise da idade</h2>
+
+    <input placeholder="Sua idade" id="inp_idade" onkeyup="analisar()">
+    
+    <div id="div_analise"></div>
+
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var idade = Number(inp_idade.value)
+
+        /* 
+        Aqui usamos o Operador ternário (?:)
+        Antes da ? é ima expressão lógica (ou boleana)
+        Se ela for true, o valor usado será o que vem logo após a ?
+        Se ela for false, o valor usado será o que vem após :
+        */
+
+        var frase = idade >= 16 ? 'Já pode votar' : 'Ainda não pode votar'
+        
+        div_analise.innerHTML = frase
+
+        div_analise.innerHTML += `
+            <br> ${idade >= 60 ? 'Já pode se aposentar' : 'Ainda não pode aposentar'}
+        `
+    }
+</script>
