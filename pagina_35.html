@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 35</title>
+</head>
+<body>
+    
+    <button onclick="sortear()">sortear</button>
+
+    <div id="div_sorteio"></div>
+    
+</body>
+</html>
+<script>
+    function sortear() {
+        var sorteado = Math.random()
+        div_sorteio.innerHTML = `Sorteado: ${sorteado}`
+
+        var sorteado2 = Math.random() * 10
+        div_sorteio.innerHTML += ` <br>Sorteado2: ${sorteado2}`
+
+        var sorteado3 = parseInt(Math.random() * 6) + 1
+        div_sorteio.innerHTML += ` <br>Sorteado3: ${sorteado3}`
+    }
+</script>
