@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 39</title>
+</head>
+
+<body>
+    <h3></h3>
+
+    <button onclick="repetir4x()">repetir 4x</button>
+    <br>
+    <input placeholder="Quantas repetições?" id="inp_quantidade">
+    <button onclick="repetir()">Repetir N vezes</button>
+
+    <br>
+    <div id="div_repeticoes"></div>
+
+
+</body>
+
+</html>
+<script>
+    function repetir4x() {
+        div_repeticoes.innerHTML = '' // limpando a div
+
+        var exibicoes = 0
+        /*
+        Aqui usamos uma estrutura de repetição
+        */
+
+        while (exibicoes < 4) {
+            div_repeticoes.innerHTML += 'É nois no algoritmo <br>'
+            exibicoes++
+        }
+    }
+
+    function repetir() {
+        div_repeticoes.innerHTML = ''
+
+        var exibicoes = 0
+        var repetir = Number(inp_quantidade.value)
+
+
+        while (exibicoes < repetir) {
+            div_repeticoes.innerHTML += 'Eu domino minhas repetições <br>'
+            exibicoes++
+        }
+    }
+
+</script>

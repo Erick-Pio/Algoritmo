@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 01</title>
+</head>
+<body>
+    
+    <input placeholder="informe uma frase" id="inp_frase"> <br>
+    <input placeholder="informe a quantidade a se repetir" id="inp_quantidade">
+
+    <button onclick="papagaio()">Papagaio</button>
+
+    <div id="div_repeticoes"></div>
+
+</body>
+</html>
+<script>
+    function papagaio(){
+        div_repeticoes.innerHTML = ''
+
+        var exibicoes = 0
+        var frase = inp_frase.value
+        var repetir = Number(inp_quantidade.value)
+        var par = exibicoes%2
+        var cor = ''
+
+        while(exibicoes < repetir){
+            div_repeticoes.innerHTML += `<span style ="color: ${cor}">${exibicoes + 1} - ${frase}        </span> <br>`
+            
+            cor = cor == 'red' ? 'green' : 'red'
+
+            exibicoes++
+        }
+
+        
+
+    }
+</script>
