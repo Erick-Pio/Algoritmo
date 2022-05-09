@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05-05 q03</title>
+</head>
+<body>
+    <h3>O Papagaio</h3>
+
+    <input placeholder="Qual frase?" id="in_frase"> <br>
+    <input placeholder="Quantas vezes?" id="in_limite"> <br>
+    <button onclick="papagaio()">Papagaio</button>
+    <br>
+    <p id="p_papagaio"></p>
+</body>
+</html>
+<script>
+function papagaio() {
+    p_papagaio.innerHTML = ''
+
+    var frase = in_frase.value
+    var limite = Number(in_limite.value)
+    var exibiu = 0
+    
+    var cor = 'red'
+
+    while (exibiu < limite) {
+        p_papagaio.innerHTML += `<span style="color: ${cor}">${exibiu+1} - ${frase} </span> <br>`
+        
+        cor = cor == 'red' ? 'green' : 'red'
+        
+        exibiu++
+    }
+
+}
+</script>
