@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 8 if-else </title>
+</head>
+
+<body>
+
+    <input placeholder="Quantos homens no elevador?" id="inp_homens">
+    <br>
+    <input placeholder="Quantas mulheres no elevador?" id="inp_mulheres">
+    <br>
+    <button onclick="elevador()">Ligar elevador</button>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+<script>
+    function elevador() {
+        var homempeso = 90
+        var mulherpeso = 70
+        var homem = Number(inp_homens.value * homempeso)
+        var mulher = Number(inp_mulheres.value * mulherpeso)
+        var peso = homem + mulher
+
+        if (peso < 500) {
+            div_resultado.innerHTML = `<span style="color: green;">O elevador vai se mover pois o peso é ${peso}</span>`
+        } else {
+            div_resultado.innerHTML = `<span style="color: red;">O elevador vai se mover pois o peso é ${peso}</span>`
+        }
+    }
+</script>
