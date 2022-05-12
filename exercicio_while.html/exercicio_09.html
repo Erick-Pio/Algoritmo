@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio while - 09</title>
 </head>
+
 <body>
-    
-    
+    <h2>Vinícola</h2>
+
+    <input placeholder="Qual o preço da garrafa?" id="inp_preco">
+    <br>
+    <input placeholder="Quantas garrafas?" id="inp_qtd">
+    <br>
+    <button onclick="vinho()">Tomar vinho</button>
+    <br>
+    <div id="div_vinho"></div>
+    <br>
+    <div id="div_img"></div>
+
 </body>
+
 </html>
+<script>
+    function vinho() {
+        var preco = Number(inp_preco.value)
+        var qtd = Number(inp_qtd.value)
+        var resultado = preco * qtd
+        var exibiu = 0
+
+        div_vinho.innerHTML = `Você vai pagar $${resultado} por ${qtd} garrafas de vinho`
+        
+        while(exibiu < qtd){
+        div_img.innerHTML += `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg3ufDP8P_eNOVYBE4jxonWxf45n6p392Z0qxCRBgZVxtG_ZOnFPZcLMzjed2z9_W9uSc&usqp=CAU">`
+        
+        exibiu++
+    }
+    }
+</script>

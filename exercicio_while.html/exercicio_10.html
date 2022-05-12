@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio while - 10</title>
+</head>
+
+<body>
+
+    <h2 style="color: gold">Moedas de ouro</h2>
+
+    Quantas moedas de ouro você tem?
+    <br>
+    <input placeholder="Moedas de ouro " id="inp_moedas" onkeyup="moeda()">
+    <br>
+    <div id="div_ouro"></div>
+</body>
+
+</html>
+<script>
+    function moeda(){
+        div_ouro.innerHTML= ''
+
+        var moedas = Number(inp_moedas.value)
+        var exibiu = 0
+        var moedas_na_linha = 0
+
+        while(exibiu < moedas){
+            div_ouro.innerHTML += `<img src="moeda-de-ouro.jfif" style="width:30px">`
+            exibiu++
+            moedas_na_linha++
+
+            if(moedas_na_linha == 10){
+                div_ouro.innerHTML += '<br>'
+                moedas_na_linha = 0
+            }
+        }
+    }
+</script>

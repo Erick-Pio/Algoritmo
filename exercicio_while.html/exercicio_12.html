@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ursinhos</title>
+</head>
+<body>
+    
+    <h2>Ursinhos</h2>
+
+    Qual o número <br>
+    <select id="inp_ursos" onchange="exibir_ursos()">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+    </select>
+    <br>
+    <p id="p_ursos"></p>
+</body>
+</html>
+<script>
+
+    function exibir_ursos(){
+        p_ursos.innerHTML = ''
+
+        var ursos = Number(inp_ursos.value)
+        var exibiu = 0
+        var linha = 1
+        var exibidos_na_linha =0 
+
+        while(exibiu < ursos) {
+            while(exibidos_na_linha < linha && exibiu < ursos){
+                p_ursos.innerHTML += '<img src="ursinho.png">'
+                exibidos_na_linha++
+                exibiu++
+            }
+            p_ursos.innerHTML +='<br>'
+            linha++
+            exibidos_na_linha = 0
+        }
+    }
+</script>
