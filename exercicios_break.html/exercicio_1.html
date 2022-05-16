@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio - 1</title>
+</head>
+
+<body>
+
+    <h2>limites numéricos</h2>
+
+    Digite um número
+    <br>
+    <input type="number" id="inp_numero" onkeyup="contar()">
+    <br>
+    <input type="number" id="inp_limite" onkeyup="contar()">
+    <br>
+    <div id="div_soma"></div>
+
+</body>
+
+</html>
+<script>
+    function contar() {
+        div_soma.innerHTML = ''
+
+        var numero = Number(inp_numero.value)
+        var limite = Number(inp_limite.value)
+
+        var soma = 0
+
+        for (var contador = 0; contador <= numero; contador++) {
+            soma += contador
+            if (soma > limite) {
+                break
+            }
+            div_soma.innerHTML += `${contador} - ${soma} <br>`
+        }
+        
+    }
+</script>
