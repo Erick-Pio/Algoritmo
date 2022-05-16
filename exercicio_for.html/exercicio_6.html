@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio while - 08</title>
+</head>
+<body>
+
+    <input placeholder="1 número de 0 a 200" id="inp_numero">
+    <br>
+    <button onclick="viva()">Viva o 7!</button>
+    <br>
+    <div id="div_viva"></div>
+
+</body>
+</html>
+<script>
+    function viva(){
+        div_viva.innerHTML = ''
+
+        var numero = Number(inp_numero.value)
+        var exibiu = 7
+
+        for(var multiplo7 = exibiu % 7 == 0; exibiu <= numero; exibiu ++){
+            
+            if(multiplo7){
+                div_viva.innerHTML += `${exibiu} <br>`
+            }
+            
+        }
+    }
+</script>

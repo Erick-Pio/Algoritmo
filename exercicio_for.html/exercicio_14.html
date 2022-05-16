@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 14</title>
+</head>
+
+<body>
+
+    <h3>Malhação</h3>
+
+    <input placeholder="Quantos dias ?" type="number" id="inp_dias" autofocus onkeyup="malhar()">
+    <br>
+    <div id="div_malhacao"></div>
+
+</body>
+
+</html>
+<script>
+    function malhar() {
+        div_malhacao.innerHTML = ''
+
+        var dias = Number(inp_dias.value)
+
+        for (var contador = 0; contador < dias; contador++) {
+            div_malhacao.innerHTML += `<img src="malhando.jfif" style="width: 150px">`
+
+            if (contador == 89) {
+                div_malhacao.innerHTML += `<img src="torneada.jfif" style="width: 200px">`
+            }
+
+            if (contador == 179) {
+                div_malhacao.innerHTML += `<img src="meio_forte.jfif" style="width: 200px">`
+            }
+
+            if (contador == 364) {
+                div_malhacao.innerHTML += `<img src="bem_forte.jfif" style="width: 100px">`
+            }
+
+            if (contador == 719) {
+                div_malhacao.innerHTML += `<img src="muito_forte.jfif" style="width: 200px">`
+            }
+        }
+    }
+</script>
