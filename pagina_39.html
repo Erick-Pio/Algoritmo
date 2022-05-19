@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina - 39</title>
+</head>
+<body>
+    <input placeholder="Nova fruta" id="inp_fruta">
+    <br>
+    <button onclick="cadastrar()">cadastrar</button>
+
+    <input placeholder="Qual você quer rever?" id="inp_consulta" onkeyup="rever()">
+
+    <div id="div_frutas"></div>
+
+</body>
+</html>
+<script>
+    // vetor vazio
+    var frutas = []
+
+    function cadastrar() {
+        // push insere um elemento no vetor
+        frutas.push(inp_fruta.value)
+    }
+
+    function rever() {
+        var consulta = Number(inp_consulta.value)
+        
+        if(consulta >= 1 && consulta <= frutas.length){
+        var fruta_recuperada = frutas[consulta - 1]
+        div_frutas.innerHTML = `A ${consulta}° fruta cadastrada foi ${fruta_recuperada}`
+        }else{
+            div_frutas.innerHTML = `Fruta não encontrada`
+        }
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - array - 1</title>
+</head>
+<body>
+    <input placeholder="Pais que já viajou" id="inp_pais">
+    <br>
+    <button onclick="cadastro()">Cadastrar País</button>
+    <br>
+    <button onclick="relatorio()">Relatório</button>
+</body>
+</html>
+<script>
+    var pais = []
+
+    function cadastro(){
+        pais.push(inp_pais.value)
+    }
+
+    function relatorio() {
+
+        var quantidade = pais.length
+
+        var primeiro = quantidade > 0 ? pais[0] : 'Não encontrado'
+
+        var terceiro = quantidade >= 3 ? pais [2] : 'Não encontrado'
+
+        var ultimo = quantidade > 0 ? pais [quantidade - 1] : 'Não encontrado'
+
+        var texto = `Você já viajou para ${quantidade} paises: <br>
+        1° País : ${primeiro} <br>
+        2° País : ${terceiro} <br>
+        ultimo País: ${ultimo}`
+
+    }
+</script>
