@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio - 10</title>
 </head>
+
 <body>
-    
+
     <h2>Processo seletivo de pilotos</h2>
 
     Qual a altura inicial para que a seleção ocorra? <br>
@@ -23,16 +25,33 @@
     <input placeholder="altura" id="inp_altura"> <br>
 
     <button onclick="selecao()">Ir para seleção</button>
+    <br>
+    <div id="div_resultado"></div>
 </body>
+
 </html>
 <script>
-    
-    var inicial = Number(inp.inicial.value)
-    var final = Number(inp_final.value)
 
     function selecao() {
-        if(inicial <= 0) {
-            alert('Não é possivel continuar')
+        var inicial = Number(inp_inicial.value)
+        var final = Number(inp_final.value)
+        var nome = inp_nome.value
+        var altura = inp_altura.value
+        var alerta = ''
+        var frase = ''
+
+        if (inicial > 1 && final > inicial) {
+            if (altura >= inicial && altura <= final) {
+                frase = `O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto <br>`
+            } else {
+                frase = `Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos <br>`
+            }
+
+            div_resultado.innerHTML += frase
+        } else {
+            alerta = 'Não é possivel continuar'
+            alert(alerta)
         }
+
     }
 </script>
