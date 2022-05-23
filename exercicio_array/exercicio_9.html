@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 9</title>
+</head>
+
+<body>
+
+    <h2>Projetos de vida</h2>
+
+    <input placeholder="Cadastrar projeto" id="inp_projetos">
+    <br>
+    <button onclick="registrar()">Registrar projeto</button>
+    <br>
+    <div id="div_projetos"></div>
+    <br>
+    <button onclick="mostrar()">Mostrar Projetos</button>
+    <br>
+    <div id="div_mostrar"></div>
+
+</body>
+
+</html>
+<script>
+    projetos = []
+
+    function registrar() {
+        projetos.push(inp_projetos.value)
+
+        frase = ''
+
+        for (var qtdprojeto = 0; qtdprojeto < projetos.length; qtdprojeto++) {
+            if (projetos.length >= 0 && projetos.length <= 4) {
+                frase = `Você ja fez ${projetos.length} projetos. Por isso você é Dev Júnior <br>`
+            }
+            if (projetos.length >= 5 && projetos.length <= 12) {
+                frase = `Você ja fez ${projetos.length} projetos. Pleno desde o ${projetos[4]} <br>`
+            }
+            if (projetos.length >= 13) {
+                frase = `Você ja fez ${projetos.length} projetos. Sênior desde o ${projetos[12]} <br>`
+            }
+            div_projetos.innerHTML = frase
+        }
+        
+
+    }
+
+     function mostrar() {
+        div_mostrar.innerHTML = ''
+
+        for (var posicao = projetos.length - 1; posicao >= 0; posicao--) {
+            div_mostrar.innerHTML += `${projetos[posicao]} <br>`
+        }
+    }
+</script>

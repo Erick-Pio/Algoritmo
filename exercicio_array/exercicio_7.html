@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 7</title>
+</head>
+<body>
+    
+    <h2>Lista de filmes</h2>
+
+    <input placeholder="Novo filme" id="inp_filmes">
+    <br>
+    <button onclick="cadastrar()">Cadastrar bairro</button>
+    <br>
+    <div id="div_filmes"></div>
+
+</body>
+
+</html>
+<script>
+    var filmes = []
+
+    function cadastrar() {
+        filmes.push(inp_filmes.value)
+
+        div_filmes.innerHTML = ''
+
+        var cor = 'red'
+
+        //iterando no vetor
+        //ou seja, "navegando" em cada um dos elementos
+        for(var posicao = 0; posicao < filmes.length; posicao ++){
+            div_filmes.innerHTML += `<span style="color: ${cor}"> ${filmes[posicao]} <br>`
+                cor = cor == 'red' ? 'blue' : 'red'
+        }
+
+    }
+</script>

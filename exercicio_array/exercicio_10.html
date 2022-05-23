@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 10</title>
+</head>
+
+<body>
+    <h2>Linha de onibus</h2>
+
+    <input placeholder="Qual linha você pegou?" id="inp_onibus">
+    <br>
+    <button onclick="buzao()">Gravar buzão</button>
+    <br>
+    <div id="div_mostrar"></div>
+    <br>
+    <input placeholder="Pesquisa" id="inp_pesquisa">
+    <br>
+    <button onclick="pesquisa()">Pesquisar</button>
+    <br>
+    <div id="div_pesquisa"></div>
+
+</body>
+
+</html>
+<script>
+    onibus = []
+
+    function buzao() {
+        onibus.push(inp_onibus.value)
+
+
+
+        div_mostrar.innerHTML = ''
+
+        for (var linha = onibus.length - 1; linha >= 0; linha--) {
+            div_mostrar.innerHTML += `${onibus[linha]} <br>`
+        }
+    }
+
+    function pesquisa() {
+        div_pesquisa.innerHTML = ''
+
+
+
+        for (var linha = 0; linha < onibus.length; linha++) {
+            if (onibus > 0) {
+                div_pesquisa.innerHTML = `${onibus.indexOf('inp_pesquisa.value')}`
+            }
+        }
+    }
+</script>

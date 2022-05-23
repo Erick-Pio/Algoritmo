@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 8</title>
+</head>
+<body>
+    
+    <h2>Cadastro de alunos</h2>
+
+    <input placeholder="Cadastro do aluno" id="inp_alunos">
+    <br>
+    <button onclick="cadastrar()">cadastrar</button>
+    <br>
+    <div id="div_alunos"></div>
+
+</body>
+</html>
+<script>
+    alunos = []
+
+    function cadastrar(){
+        alunos.push(inp_alunos.value)
+
+        div_alunos.innerHTML = ''
+
+        for(var posicao = alunos.length - 1; posicao >= 0; posicao --){
+            div_alunos.innerHTML += `${alunos[posicao]} <br>`
+        }
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 3</title>
+</head>
+
+<body>
+
+    <h2>Cadastro de bairros</h2>
+
+    <input placeholder="Novo bairro" id="inp_bairro">
+    <br>
+    <button onclick="cadastrar()">Cadastrar bairro</button>
+    <br>
+    <input placeholder="Relembrar moradia" id="inp_consulta">
+    <br>
+    <button onclick="relembrar()">Relembrar moradia</button>
+    <br>
+    <div id="div_relembrar"></div>
+
+</body>
+
+</html>
+<script>
+    var bairros = []
+
+    function cadastrar() {
+        bairros.push(inp_bairro.value)
+    }
+
+    function relembrar() {
+        var consulta = Number(inp_consulta.value)
+
+
+        if (consulta >= 1 && consulta <= bairros.length && consulta >= 1) {
+            div_relembrar.innerHTML = bairros[consulta - 1]
+        } else {
+            div_relembrar.innerHTML = `Você não morou num ${consulta}° bairro`
+        }
+    }
+</script>
