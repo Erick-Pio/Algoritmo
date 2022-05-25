@@ -44,12 +44,11 @@
     function pesquisa() {
         div_pesquisa.innerHTML = ''
 
+        var bus = inp_onibus.value
+        var linha = onibus.length
 
-
-        for (var linha = 0; linha < onibus.length; linha++) {
-            if (onibus > 0) {
-                div_pesquisa.innerHTML = `${onibus.indexOf('inp_pesquisa.value')}`
+        if(bus.indexOf(onibus) > -1) {
+                div_pesquisa.innerHTML = `${bus.indexOf(onibus)}`
             }
         }
-    }
 </script>
