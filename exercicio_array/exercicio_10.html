@@ -47,8 +47,11 @@
         var bus = inp_onibus.value
         var linha = onibus.length
 
-        if(bus.indexOf(onibus) > -1) {
-                div_pesquisa.innerHTML = `${bus.indexOf(onibus)}`
-            }
+        if (bus.indexOf(onibus) == - 1) {
+            div_pesquisa.innerHTML = `Você nunca pegou essa linha`
+        } else {
+            div_pesquisa.innerHTML = `Você já pegou essa linha ${onibus} vezes = ${linha} `
         }
+    }
+
 </script>
